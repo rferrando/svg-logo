@@ -1,0 +1,47 @@
+#wrapper {
+  max-width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+svg {
+  border-radius: 100%;
+}
+
+#circle {
+  fill: rgba(150, 48, 90, 0.8);
+  stroke: black;
+  stroke-width: 20;
+  stroke-dasharray: calc(3.14159 * 20);
+  stroke-dashoffset: calc(3.14159 * 20);
+  animation: rotate 5s linear infinite;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+#logo-text {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 0.05;
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+  animation: draw 2s forwards, color 2s 1s forwards;
+}
+
+#bracket {
+  font-size: 75%;
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  to { stroke-dashoffset: 0 }
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0 }
+}
+
+@keyframes color {
+  to { fill: white }
+}
+
